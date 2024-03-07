@@ -1,0 +1,45 @@
+.home-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  font-size: 1.3rem;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.register-button {
+  color: #fff;
+  background: rgb(172, 0, 113);
+  background: linear-gradient(
+    90deg,
+    rgba(172, 0, 113, 1) 46%,
+    rgba(244, 0, 255, 1) 100%
+  );
+  border: none;
+  align-self: center;
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+.register-button:hover {
+  background: rgb(172, 0, 113);
+  background: linear-gradient(
+    90deg,
+    rgb(159, 66, 127) 46%,
+
+    rgb(246, 75, 255) 100%
+  );
+}
