@@ -1,0 +1,25 @@
+.parent-div {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  margin-top: 10%;
+  border: 1px solid;
+  width: fit-content;
+}
+
+.users-div {
+  display: flex;
+  column-gap: 20px;
+}
+
+input {
+  background: none;
+}
