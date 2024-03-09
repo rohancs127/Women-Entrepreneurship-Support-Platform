@@ -1,16 +1,15 @@
-import { useState } from 'react';
-import './App.css';
-import Navbar from './Components/Navbar';
-import Home from './Pages/Home';
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
 
 function App() {
-
   return (
     <>
-     <Navbar/>
-     <Home/>
+      <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
