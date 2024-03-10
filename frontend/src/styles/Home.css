@@ -43,3 +43,11 @@
     rgb(246, 75, 255) 100%
   );
 }
+
+.register-button:focus {
+  outline: none;
+}
+
+a {
+  align-self: center;
+}
