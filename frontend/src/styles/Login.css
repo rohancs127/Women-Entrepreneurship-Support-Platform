@@ -1,8 +1,11 @@
 .parent-div {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  row-gap: 30px;
   align-items: center;
+  height: 100vh;
+  color: #fff;
+  /* background-color: rgb(255, 202, 244); */
 }
 
 .login-section {
@@ -11,8 +14,17 @@
   row-gap: 30px;
   align-items: center;
   margin-top: 10%;
-  border: 1px solid;
+  box-shadow: 0px 0px 10px rebeccapurple;
   width: fit-content;
+  padding: 50px;
+  background: rgb(172, 0, 113);
+  background: linear-gradient(
+    90deg,
+    rgb(183, 76, 145) 46%,
+
+    rgb(246, 75, 255) 100%
+  );
+  border-radius: 10px;
 }
 
 .users-div {
@@ -20,6 +32,71 @@
   column-gap: 20px;
 }
 
+.input-heading {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 input {
   background: none;
+  border: 1px solid #ffffff8b;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+input::placeholder {
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+.login-input-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-self: flex-start;
+}
+
+.user-link {
+  color: #fff;
+}
+
+.login-heading {
+  font-size: 2.1rem;
+}
+
+.new-register {
+  color: #000;
+}
+
+.user-link,
+.new-register-tag {
+  cursor: pointer;
+}
+.user-link:hover {
+  color: #fff;
+}
+
+.user-link:hover,
+.new-register-tag:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: rebeccapurple;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition: all 0.3s;
+}
+
+.login-button:hover {
+  background-color: rgb(129, 66, 193);
+  box-shadow: 0px 3px 3px #00000022;
+}
+
+.login-button:focus {
+  outline: none;
 }
