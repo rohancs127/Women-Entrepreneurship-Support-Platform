@@ -1,0 +1,12 @@
+.users-div {
+  display: flex;
+  column-gap: 20px;
+}
+
+.user-link {
+  color: inherit;
+}
+
+.user-link:hover {
+  color: inherit;
+}
