@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/EntrepreneurRegForm.css";
+import "../styles/RegistrationForm.css";
 import UserToggle from "../Components/UserToggle";
 import { useState } from "react";
 
-function EntrepreneurRegForm() {
+function RegistrationForm() {
   const [user, setUser] = useState("Entrepreneur");
   //   const navigate = useNavigate()
   //   const [error, setError] = React.useState("")
@@ -124,4 +124,4 @@ function EntrepreneurRegForm() {
   );
 }
 
-export default EntrepreneurRegForm;
+export default RegistrationForm;
