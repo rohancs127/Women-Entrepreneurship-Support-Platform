@@ -12,7 +12,7 @@ app.listen(3000, () => {
 });
 
 async function getData() {
-  const data = await pool.query("select * from mentor", (err, res) => {
+  const data = await pool.query("select * from invests", (err, res) => {
     if (err) {
       console.log(err);
     } else {
