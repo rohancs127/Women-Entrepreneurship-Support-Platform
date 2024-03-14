@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../styles/RegistrationForm.css";
 import UserToggle from "../Components/UserToggle";
 import { useState } from "react";
+import LocationInput from "../Components/LocationInput";
+import BusinessInput from "../Components/BusinessInput";
+import DomainInput from "../Components/DomainInput";
 
 function RegistrationForm() {
   const [user, setUser] = useState("Entrepreneur");
@@ -47,6 +50,15 @@ function RegistrationForm() {
     <div className="registration-div">
       <h1 className="registration-heading">Register as {user}</h1>
       <div className="input-div">
+        <h3 className="attribute-div">{user} ID</h3>
+        <input
+          className="reg-input"
+          type="text"
+          name="name"
+          // onChange={handleChange}
+        />
+      </div>
+      <div className="input-div">
         <h3 className="attribute-div">Name</h3>
         <input
           className="reg-input"
@@ -67,17 +79,6 @@ function RegistrationForm() {
         />
       </div>
       <div className="input-div">
-        <h3 type="email" className="attribute-div">
-          Password
-        </h3>
-        <input
-          className="reg-input"
-          type="password"
-          name="password"
-          // onChange={handleChange}
-        />
-      </div>
-      <div className="input-div">
         <h3 className="attribute-div">Phone</h3>
         <input
           className="reg-input"
@@ -86,30 +87,9 @@ function RegistrationForm() {
           // onChange={handleChange}
         />
       </div>
-      <div className="location-input-div">
-        <h3 className="attribute-div">Location</h3>
-        <input
-          className="reg-input"
-          type="text"
-          placeholder="City"
-          name="city"
-          //   onChange={handleChange}
-        />
-        <input
-          className="reg-input"
-          type="text"
-          placeholder="State"
-          name="state"
-          //   onChange={handleChange}
-        />
-        <input
-          className="reg-input"
-          type="text"
-          placeholder="Country"
-          name="country"
-          //   onChange={handleChange}
-        />
-      </div>
+      {user == "Entrepreneur" && <BusinessInput />}
+      {user == "Entrepreneur" && <LocationInput />}
+      {user == "Mentor" && <DomainInput />}
       {/* {error && <p className="error-message">{error}</p>} */}
       <button
         className="submit-button"

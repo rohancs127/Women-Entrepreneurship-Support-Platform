@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Login.css";
 import UserToggle from "../Components/UserToggle";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [user, setUser] = useState("Entrepreneur");
@@ -21,7 +22,10 @@ function Login() {
         <button className="login-button">Login</button>
       </div>
       <div className="new-register">
-        New User? <a className="new-register-tag"> Register</a>
+        New User?{" "}
+        <Link to="/registration">
+          <a className="new-register-tag"> Register</a>
+        </Link>
       </div>
     </div>
   );

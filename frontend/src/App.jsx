@@ -20,10 +20,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="entrepreneur_registration"
-          element={<RegistrationForm />}
-        />
+        <Route path="/registration" element={<RegistrationForm />} />
       </Routes>
     </Router>
   );
