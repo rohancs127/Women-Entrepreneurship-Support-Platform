@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "nodemon",
-    "start": "node index.js"
+    "start": "node index.js",
+    "seed": "node seed.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,10 @@
     "cors": "^2.8.5",
     "express": "^4.18.3",
     "nodemon": "^3.1.0",
-    "pg": "^8.11.3"
+    "pg": "^8.11.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

@@ -1,9 +1,9 @@
 import { z } from "zod";
-import { generate_nanoId } from "./utils.js";
+// import { generate_nanoId } from "./utils.js";
 const userTypes = ["Entrepreneur", "Mentor", "Organisation"];
 
 export const mentorSchema = z.object({
-  mentor_id: z.string().default(generate_nanoId(4, "MEN")),
+  mentor_id: z.string(),
   mentor_name: z.string(),
   domain: z.string(),
 });
@@ -15,7 +15,7 @@ export const loginSchema = z.object({
 });
 
 export const EntrepreneurSchema = z.object({
-  ent_id: z.string().default(generate_nanoId(4, "ENT")),
+  ent_id: z.string(),
   mentor_id: z.string(),
   ent_name: z.string(),
   business: z.string(),
@@ -25,12 +25,12 @@ export const EntrepreneurSchema = z.object({
 });
 
 export const OrganisationSchema = z.object({
-  org_id: z.string().default(generate_nanoId(4, "ORG")),
+  org_id: z.string(),
   org_name: z.string(),
 });
 
 export const InvestsSchema = z.object({
-  inv_id: z.string().default(generate_nanoId(5, "INV")),
+  inv_id: z.string(),
   ent_id: z.string(),
   ent_id: z.string(),
   amount: z.number(),
