@@ -1,0 +1,15 @@
+.profile-section {
+  display: flex;
+  column-gap: 100px;
+  align-items: center;
+  border: solid 1px #8b8b8b;
+  padding: 50px;
+  width: max-content;
+  border-radius: 10px;
+}
+
+.details-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

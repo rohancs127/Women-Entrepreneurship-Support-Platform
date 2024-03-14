@@ -1,0 +1,19 @@
+.list-card-section {
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  border: solid 1px #8b8b8b;
+  padding: 10px 50px 10px 20px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.list-card-section:hover {
+  background-color: #cfcfcf;
+}
+
+.list-card-details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

@@ -19,7 +19,9 @@ function Login() {
           <h2 className="input-heading">{user} UserId</h2>
           <input placeholder="userid" className="login-input" />
         </div>
-        <button className="login-button">Login</button>
+        <Link to="/entrepreneur_page">
+          <button className="login-button">Login</button>
+        </Link>
       </div>
       <div className="new-register">
         New User?{" "}
