@@ -1,20 +1,33 @@
 import React from "react";
 import { UserRound, X } from "lucide-react";
+import "../styles/MentorCard.css";
 
-function MentorCard() {
+function MentorCard({ setDisplayCard, mentor }) {
   return (
     <div className="mentor-card-div">
-      <X />
+      <div className="close">
+        <X strokeWidth={5} onClick={() => setDisplayCard(false)} />
+      </div>
       <div>
-        <UserRound />
+        <UserRound size={150} />
+        <h2>{mentor.mentor_name}</h2>
+        <p>
+          <strong>ID:</strong> {mentor.mentor_id}
+        </p>
       </div>
       <div className="mentor-details">
-        <h2>Name</h2>
-        <p>ID: xxxxx</p>
-        <p>Domain: </p>
-        <p>Email: email</p>
-        <p>Phone: phone</p>
-        <p>Mentees: x</p>
+        <p>
+          <strong>Domain:</strong> {mentor.domain}
+        </p>
+        <p>
+          <strong>Email:</strong> {mentor.email}
+        </p>
+        <p>
+          <strong>Phone:</strong> {mentor.phone}
+        </p>
+        <p>
+          <strong>Mentees:</strong> x
+        </p>
       </div>
     </div>
   );
