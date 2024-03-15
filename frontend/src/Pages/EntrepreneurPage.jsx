@@ -33,7 +33,7 @@ function EntrepreneurPage() {
             <ListCard key={mentor.id} mentor={mentor} />
           ))
         ) : (
-          <p>No Disasters Available</p>
+          <p>No Mentors Available</p>
         )}
       </div>
     </div>
