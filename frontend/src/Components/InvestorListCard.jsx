@@ -1,28 +1,30 @@
 import React from "react";
 import "../styles/ListCard.css";
-import MentorCard from "./MentorCard";
-import { SquareUserRound } from "lucide-react";
+import InvestorCard from "./InvestorCard";
+import { CircleDollarSign } from "lucide-react";
 import { useState } from "react";
 
-function ListCard({ mentor }) {
+function InvestorListCard({ organisation }) {
   const [displayCard, setDisplayCard] = useState(false);
   return (
     <div>
       <div className="list-card-section" onClick={() => setDisplayCard(true)}>
-        <SquareUserRound size={80} />
+        <CircleDollarSign size={50} />
         <div className="list-card-details">
-          <h3>{mentor.mentor_name}</h3>
-          <p>{mentor.domain}</p>
+          <h3>{organisation.org_name}</h3>
         </div>
       </div>
 
       {displayCard && (
         <div>
-          <MentorCard setDisplayCard={setDisplayCard} mentor={mentor} />
+          <InvestorCard
+            setDisplayCard={setDisplayCard}
+            organisation={organisation}
+          />
         </div>
       )}
     </div>
   );
 }
 
-export default ListCard;
+export default InvestorListCard;
