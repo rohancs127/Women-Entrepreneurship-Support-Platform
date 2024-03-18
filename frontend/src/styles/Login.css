@@ -67,6 +67,10 @@ input:focus {
 .new-register-tag {
   cursor: pointer;
 }
+
+.new-register-tag {
+  display: inline;
+}
 .user-link:hover {
   color: #fff;
 }

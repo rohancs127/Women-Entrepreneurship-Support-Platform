@@ -1,21 +1,18 @@
 import React from "react";
 import { Search } from "lucide-react";
 import "../styles/Navbar.css";
+import EntrepreneurNavbarContent from "./EntrepreneurNavbarContent";
 
-function Navbar() {
+function Navbar({ onNavItemClick }) {
   return (
     <div className="navbar-section">
       <h1 className="page-title">ShePreneur</h1>
       <div className="navigate-and-search-section">
-        <div className="navigate-section">
-          <ul>Home</ul>
-          <ul>Mentors</ul>
-          <ul>Investment</ul>
-        </div>
-        <div className="search-section">
+        <EntrepreneurNavbarContent onNavItemClick={onNavItemClick} />
+        {/* <div className="search-section">
           <Search />
           <input className="search-input" type="text" placeholder="Search" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -1,0 +1,7 @@
+.navigate-section {
+  justify-content: flex-start;
+  width: 100%;
+  column-gap: 70px;
+  margin-left: 30px;
+  font-size: 1.2rem;
+}
