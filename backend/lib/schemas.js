@@ -11,9 +11,8 @@ export const mentorSchema = z.object({
 });
 
 export const loginSchema = z.object({
-  name: z.string(),
-  z: z.string(),
-  type: z.enum(userTypes).default("Mentor"),
+  email: z.string(),
+  id: z.string(),
 });
 
 export const EntrepreneurSchema = z.object({
