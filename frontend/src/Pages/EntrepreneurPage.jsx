@@ -5,9 +5,13 @@ import MentorListCard from "../Components/MentorListCard";
 import InvestorListCard from "../Components/InvestorListCard";
 import "../styles/EntrepreneurPage.css";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function EntrepreneurPage() {
   const [activePage, setActivePage] = useState("home");
+
+  const { ent_id } = useParams();
 
   const handleNavItemClick = (page) => {
     setActivePage(page);
@@ -19,19 +23,37 @@ function EntrepreneurPage() {
 
   const [mentors, setMentors] = useState(null);
   const [organisations, setOrganisations] = useState(null);
+  const [ent, setEnt] = useState(null);
 
-  async function getMentors() {
-    const response = await fetch("http://localhost:5000/mentor");
-    const data = await response.json();
-    if (response.ok) {
-      setMentors(data);
-    } else {
-      setMentors(null);
-    }
+  // async function getMentors() {
+  //   const response = await fetch("http://localhost:5000/mentor");
+  //   const data = await response.json();
+  //   if (response.ok) {
+  //     setMentors(data);
+  //   } else {
+  //     setMentors(null);
+  //   }
 
+  //   console.log(data);
+  // }
+
+  async function fetchData() {
+    const response = await axios.get(
+      `http://localhost:5000/entrepreneur/entrepreneur/${ent_id}`
+    );
+    const data = await response.data.data;
     console.log(data);
+    setEnt(data)
   }
 
+  // async function getOrganisations() {
+  //   const response = await fetch("http://localhost:5000/organisation");
+  //   const data = await response.json();
+  //   if (response.ok) {
+  //     setOrganisations(data);
+  //   } else {
+  //     setOrganisations(null);
+  //   }
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -55,17 +77,18 @@ function EntrepreneurPage() {
       setOrganisations(null);
     }
 
-    console.log(data);
-    console.log(organisations);
-  }
+  //   console.log(data);
+  //   console.log(organisations);
+  // }
 
   useEffect(() => {
-    getMentors();
+    // getMentors();
+    fetchData();
   }, []);
 
-  useEffect(() => {
-    getOrganisations();
-  }, []);
+  // useEffect(() => {
+  //   getOrganisations();
+  // }, []);
 
   return (
     <div className="entrepreneur-page">
