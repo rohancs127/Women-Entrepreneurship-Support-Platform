@@ -6,6 +6,7 @@ import mentorRoute from "./routes/mentor-route.js";
 import organisationRoute from "./routes/organisation-route.js";
 import investsRoute from "./routes/invests-route.js";
 import entrepreneurRoute from "./routes/entrepreneur-route.js";
+import authRoute from "./controllers/auth-controller.js"
 
 const app = express();
 const PORT = 5000;
@@ -23,6 +24,7 @@ app.use("/entrepreneur", entrepreneurRoute);
 app.use("/mentor", mentorRoute);
 app.use("/organisation", organisationRoute);
 app.use("/invests", investsRoute);
+app.use('/app',authRoute)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
