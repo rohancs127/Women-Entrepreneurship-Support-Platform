@@ -37,7 +37,7 @@ INSERT INTO organisation (org_id, org_name, email, phone) VALUES ('C005', 'Innov
 INSERT INTO INVESTS (inv_id, ent_id, org_id, amount, date) VALUES ('INV01', 'E001', 'C002', 50000, '2024-01-15');
 INSERT INTO INVESTS (inv_id, ent_id, org_id, amount, date) VALUES ('INV02', 'E002', 'C002', 75000, '2024-02-20');
 
-INSERT INTO INVESTS (inv_id, ent_id, org_id, amount, date) VALUES ('INV03', 'E003', 'C003', 100000, '2024-03-05');
+INSERT INTO INVESTS (inv_id, ent_id, org_id, amount, date) VALUES ('INV03', 'E001', 'C003', 100000, '2024-03-05');
 INSERT INTO INVESTS (inv_id, ent_id, org_id, amount, date) VALUES ('INV04', 'E004', 'C001', 60000, '2024-01-30');
 INSERT INTO INVESTS (inv_id, ent_id,org_id, amount, date) VALUES ('INV05', 'E005', 'C004', 90000, '2024-02-10');
 

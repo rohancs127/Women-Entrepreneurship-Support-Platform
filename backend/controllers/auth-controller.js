@@ -29,7 +29,7 @@ router.post("/login", async (req, res) => {
             });
           }
           if (results.length > 0) {
-            return res.status(401).json({
+            return res.status(200).json({
               success: true,
               message: "match found",
             });
@@ -50,7 +50,7 @@ router.post("/login", async (req, res) => {
             });
           }
           if (results.length > 0) {
-            return res.status(401).json({
+            return res.status(200).json({
               success: true,
               message: "match found",
             });
@@ -71,7 +71,7 @@ router.post("/login", async (req, res) => {
             });
           }
           if (results.length > 0) {
-            return res.status(401).json({
+            return res.status(200).json({
               success: true,
               message: "match found",
             });
