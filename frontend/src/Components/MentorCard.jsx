@@ -28,6 +28,7 @@ function MentorCard({ setDisplayCard, mentor }) {
         <p>
           <strong>Mentees:</strong> x
         </p>
+        <button className="add-button">Add Mentor</button>
       </div>
     </div>
   );

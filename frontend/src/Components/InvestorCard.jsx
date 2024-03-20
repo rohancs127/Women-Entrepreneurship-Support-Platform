@@ -25,6 +25,7 @@ function InvestorCard({ setDisplayCard, organisation }) {
         <p>
           <strong>Total Investments:</strong> x
         </p>
+        <button className="add-button">Request Fund</button>
       </div>
     </div>
   );

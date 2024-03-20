@@ -122,7 +122,7 @@ function Login() {
           <UserToggle setUser={setUser} />
         </div>
         <div className="login-input-div">
-          <form onSubmit={handleSubmit}>
+          <form className="login-input-div" onSubmit={handleSubmit}>
             <h2 className="input-heading">{user} Email</h2>
             <input placeholder="email" className="login-input" name="email" />
             <h2 className="input-heading">{user} UserId</h2>

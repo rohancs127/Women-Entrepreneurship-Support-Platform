@@ -13,6 +13,10 @@ function EntrepreneurPage() {
     setActivePage(page);
   };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const [mentors, setMentors] = useState(null);
   const [organisations, setOrganisations] = useState(null);
 
@@ -27,6 +31,20 @@ function EntrepreneurPage() {
 
     console.log(data);
   }
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        `http://localhost:500/entrepreneur/${ent_id}`
+      );
+      const { values, value } = response.data;
+
+      setData(values);
+      setProjectData(value);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   async function getOrganisations() {
     const response = await fetch("http://localhost:5000/organisation");
@@ -53,6 +71,15 @@ function EntrepreneurPage() {
     <div className="entrepreneur-page">
       <Navbar onNavItemClick={handleNavItemClick} />
       <div className="usercard-list">
+        {activePage == "home" &&
+          (mentors ? (
+            mentors.mentors.map((mentor) => (
+              <MentorListCard key={mentor.id} mentor={mentor} />
+            ))
+          ) : (
+            <p>No Mentors Available</p>
+          ))}
+
         {activePage == "mentors" &&
           (mentors ? (
             mentors.mentors.map((mentor) => (
