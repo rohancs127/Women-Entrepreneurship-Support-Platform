@@ -22,7 +22,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<RegistrationForm />} />
-        <Route path="/entrepreneur_page" element={<EntrepreneurPage />} />
+        <Route path="/entrepreneur_page/:ent_id" element={<EntrepreneurPage />} />
       </Routes>
     </Router>
   );
