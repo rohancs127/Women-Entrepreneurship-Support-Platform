@@ -34,3 +34,13 @@
   top: 20px;
   right: 20px;
 }
+
+.add-button {
+  background-color: purple;
+  color: white;
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background-color: rgb(169, 0, 169);
+}
