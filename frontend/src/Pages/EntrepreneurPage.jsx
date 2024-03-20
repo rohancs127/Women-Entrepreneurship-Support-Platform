@@ -43,7 +43,7 @@ function EntrepreneurPage() {
     );
     const data = await response.data.data;
     console.log(data);
-    setEnt(data)
+    setEnt(data);
   }
 
   // async function getOrganisations() {
@@ -77,9 +77,10 @@ function EntrepreneurPage() {
       setOrganisations(null);
     }
 
-  //   console.log(data);
-  //   console.log(organisations);
-  // }
+    //   console.log(data);
+    //   console.log(organisations);
+    //
+  }
 
   useEffect(() => {
     // getMentors();
