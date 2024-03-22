@@ -16,48 +16,44 @@ export async function getAllEntrepreneurs(req, res) {
   }
 }
 
- export const getEntrepreneur = async (req, res) => {
-  try {
-    const ent_id = req.params.ent_id;
-    console.log(ent_id);
+//  export const getEntrepreneur = async (req, res) => {
+//   try {
+//     const ent_id = req.params.ent_id;
+//     console.log(ent_id);
 
-    if (!ent_id) {
-      return res.json({
-        status: 401,
-        success: false,
-        message: "No entrepreneur details provided",
-      });
-    }
+//     if (!ent_id) {
+//       return res.json({
+//         status: 401,
+//         success: false,
+//         message: "No entrepreneur details provided",
+//       });
+//     }
 
-    // Assuming pool is your MySQL connection pool
-    pool.query(
-      "SELECT * FROM ENTREPRENEUR WHERE ent_id=?",
-      [ent_id],
-      (error, result) => {
-        if (error) {
-          return res.json({
-            status: 401,
-            success: false,
-            message: error,
-          });
-        }
-        return res.json({
-          status: 201,
-          success: true,
-          message: "Entrepreneur data fetched successfully",
-          data: result[0],
-        });
-      }
-    );
-  } catch (error) {
-    return res.json({
-      status: 500,
-      success: false,
-      message: error.message,
-    });
-  }
-};
-
-
-
-
+//     // Assuming pool is your MySQL connection pool
+//     pool.query(
+//       "SELECT * FROM ENTREPRENEUR WHERE ent_id=?",
+//       [ent_id],
+//       (error, result) => {
+//         if (error) {
+//           return res.json({
+//             status: 401,
+//             success: false,
+//             message: error,
+//           });
+//         }
+//         return res.json({
+//           status: 201,
+//           success: true,
+//           message: "Entrepreneur data fetched successfully",
+//           data: result[0],
+//         });
+//       }
+//     );
+//   } catch (error) {
+//     return res.json({
+//       status: 500,
+//       success: false,
+//       message: error.message,
+//     });
+//   }
+// };

@@ -100,7 +100,7 @@ function Login() {
 
       if (response.data.success === true) {
         if (user === "Entrepreneur") {
-          navigate(`/entrepreneur_page/${userId}`);
+          navigate(`/entrepreneur_page`);
         } else if (user === "Mentor") {
           navigate("/entrepreneur_page");
         } else {

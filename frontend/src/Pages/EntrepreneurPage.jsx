@@ -54,19 +54,19 @@ function EntrepreneurPage() {
   //   } else {
   //     setOrganisations(null);
   //   }
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        `http://localhost:500/entrepreneur/${ent_id}`
-      );
-      const { values, value } = response.data;
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       `http://localhost:500/entrepreneur/${ent_id}`
+  //     );
+  //     const { values, value } = response.data;
 
-      setData(values);
-      setProjectData(value);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  //     setData(values);
+  //     setProjectData(value);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
 
   async function getOrganisations() {
     const response = await fetch("http://localhost:5000/organisation");
